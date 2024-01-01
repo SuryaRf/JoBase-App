@@ -133,7 +133,7 @@ class SignupPage extends StatelessWidget {
                             hintText: 'Enter Phone Number',
                             hintStyle: hinttStyle,
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.only(
+                            contentPadding: const EdgeInsets.only(
                                 left: 10, right: 10, bottom: 11),
                           ),
                           textAlign: TextAlign.left,

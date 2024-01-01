@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:jobasee/homePage/homepage4.dart';
+import 'package:jobasee/getStartedPage/getStarted3.dart';
 import 'package:jobasee/theme/theme.dart';
 
-class HomePage3 extends StatelessWidget {
-  const HomePage3({super.key});
+class GetStarted2 extends StatelessWidget {
+  const GetStarted2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,34 +16,34 @@ class HomePage3 extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 140, left: 43, right: 43),
                   child: Image.asset(
-                    'assets/images/images3.png',
+                    'assets/images/images2.png',
                     width: 344,
                     height: 238,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 70,
                 ),
                 Text(
-                  'Upgrade Your Skills',
+                  'Collaborative Projects',
                   style: titleText,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 70),
                   child: Text(
-                    'Enhance your skills for greater success',
+                    'Create a great team for smooth work and strong friendships',
                     style: subTitle,
                     textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Image.asset(
-                  'assets/images/animated3.png',
+                  'assets/images/animated2.png',
                   width: 100,
                 ),
                 const SizedBox(
@@ -54,10 +54,13 @@ class HomePage3 extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Skip'),
+                      const Text('Skip'),
                       InkWell(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage4()));
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const GetStarted3()));
                         },
                         child: Container(
                           width: 80,
