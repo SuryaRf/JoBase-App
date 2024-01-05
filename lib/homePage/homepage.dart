@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:jobasee/detailJob/spotify.dart';
 import 'package:jobasee/navigationBar/navigationBar.dart';
+import 'package:jobasee/searchPage/searchJobPage.dart';
 import 'package:jobasee/theme/theme.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        showUnselectedLabels: true,
+        showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
           setState(() {
@@ -131,14 +133,19 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: TextField(
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      hintText: 'Search job or project',
-                      prefixIcon: Icon(
-                        Icons.search,
-                        size: 30,
-                      )),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    hintText: 'Search job or project',
+                    prefixIcon: Icon(
+                      Icons.search,
+                      size: 30,
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SearchJob()));
+                  },
                 ),
               ),
               const SizedBox(
@@ -606,7 +613,7 @@ class _HomePageState extends State<HomePage> {
                 height: 20,
               ),
               SizedBox(
-                height: 250,
+                height: 160,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   padding: const EdgeInsets.only(right: 5, left: 0),
@@ -895,6 +902,209 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 35),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Blog',
+                      style: subText,
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Text(
+                        'View All',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 10, left: 20),
+                    child: Container(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 90, top: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 40),
+                              child: Text(
+                                'Make It Good, Not Raw',
+                                style: subText,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 40, right: 10),
+                              child: Row(
+                                children: [
+                                  Icon(Icons.person_outline_sharp),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    'Alex santois',
+                                    style: clipTextStyleBody,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                          ],
+                        ),
+                      ),
+                      height: 130,
+                      width: 350,
+                      clipBehavior: Clip.antiAlias,
+                      decoration: ShapeDecoration(
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        shadows: const [
+                          BoxShadow(
+                            color: Color(0x1E000000),
+                            blurRadius: 10,
+                            offset: Offset(0, 3),
+                            spreadRadius: 6,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 45,
+                    top: 20,
+                    child: Container(
+                      height: 90,
+                      width: 90,
+                      clipBehavior: Clip.antiAlias,
+                      decoration: ShapeDecoration(
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        shadows: const [
+                          BoxShadow(
+                            color: Color(0x1E000000),
+                            blurRadius: 10,
+                            offset: Offset(0, 3),
+                            spreadRadius: 4,
+                          ),
+                        ],
+                      ),
+                      child: Image.asset('assets/images/Blog1.png'),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 10, left: 20),
+                    child: Container(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 90, top: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 40),
+                              child: Text(
+                                'Scientist Data Should Know',
+                                style: subText,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 40, right: 10),
+                              child: Row(
+                                children: [
+                                  Icon(Icons.person_outline_sharp),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    'Rere ruhian',
+                                    style: clipTextStyleBody,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                          ],
+                        ),
+                      ),
+                      height: 130,
+                      width: 350,
+                      clipBehavior: Clip.antiAlias,
+                      decoration: ShapeDecoration(
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        shadows: const [
+                          BoxShadow(
+                            color: Color(0x1E000000),
+                            blurRadius: 10,
+                            offset: Offset(0, 3),
+                            spreadRadius: 6,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 45,
+                    top: 20,
+                    child: Container(
+                      height: 90,
+                      width: 90,
+                      clipBehavior: Clip.antiAlias,
+                      decoration: ShapeDecoration(
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        shadows: const [
+                          BoxShadow(
+                            color: Color(0x1E000000),
+                            blurRadius: 10,
+                            offset: Offset(0, 3),
+                            spreadRadius: 4,
+                          ),
+                        ],
+                      ),
+                      child: Image.asset('assets/images/Blog2.png'),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

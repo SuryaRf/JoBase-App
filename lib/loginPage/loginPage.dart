@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:jobasee/homePage/homePage.dart';
+import 'package:jobasee/signupPage/signupPage.dart';
 import 'package:jobasee/theme/theme.dart';
 
 class LoginPage extends StatelessWidget {
@@ -130,17 +132,22 @@ class LoginPage extends StatelessWidget {
               const SizedBox(
                 height: 1,
               ),
-              Container(
-                height: 50,
-                width: 320,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: colorBtn,
-                ),
-                child: Center(
-                  child: Text(
-                    'Sign In',
-                    style: TextStyle(color: Colors.white),
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()));
+                },
+                child: Container(
+                  height: 50,
+                  width: 320,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: colorBtn,
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Sign In',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
@@ -184,7 +191,9 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(fontSize: 12),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const SignupPage()));
+                    },
                     child: Text(
                       'Sign Up',
                       style: TextStyle(color: colorBtn),

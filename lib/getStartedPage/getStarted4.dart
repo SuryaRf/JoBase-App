@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:jobasee/homePage/homePage.dart';
+import 'package:jobasee/loginPage/loginPage.dart';
 import 'package:jobasee/theme/theme.dart';
 
 class GetStarted4 extends StatelessWidget {
@@ -55,7 +57,9 @@ class GetStarted4 extends StatelessWidget {
                     children: [
                       const Text('Skip'),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage()));
+                        },
                         child: Container(
                           width: 80,
                           height: 45,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jobasee/homePage/homePage.dart';
 import 'package:jobasee/loginPage/loginPage.dart';
 import 'package:jobasee/theme/theme.dart';
 
@@ -229,7 +230,9 @@ class SignupPage extends StatelessWidget {
                   height: 15,
                 ),
                 InkWell(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
+                  },
                   child: Container(
                     height: 50,
                     width: 320,
@@ -253,7 +256,9 @@ class SignupPage extends StatelessWidget {
                     children: [
                       const Text('Already have an account ? ', style: anounStyle,),
                       InkWell(
-                        onTap: (){},
+                        onTap: (){
+                          Navigator.pop(context);
+                        },
                         child: Text('Sign In', style: signStyle,),
                       ),
                     ],
