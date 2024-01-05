@@ -1,4 +1,4 @@
-# jobasee
+# JoBase
 
 A new Flutter project.
 
