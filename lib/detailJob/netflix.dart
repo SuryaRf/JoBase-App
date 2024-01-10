@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:jobasee/applySucces/applySucces.dart';
 import 'package:jobasee/theme/theme.dart';
 
-class DetailSpotify extends StatefulWidget {
-  const DetailSpotify({super.key});
+class DetailNetflix extends StatefulWidget {
+  const DetailNetflix({super.key});
 
   @override
-  State<DetailSpotify> createState() => _DetailSpotifyState();
+  State<DetailNetflix> createState() => _DetailNetflixState();
 }
 
-class _DetailSpotifyState extends State<DetailSpotify> {
+class _DetailNetflixState extends State<DetailNetflix> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -65,18 +64,36 @@ class _DetailSpotifyState extends State<DetailSpotify> {
                   padding: const EdgeInsets.only(
                       left: 120, top: 10, right: 10, bottom: 10),
                   child: InkWell(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SuccesPage()));
-                    },
+                    onTap: (){},
                     child: Container(
                       child: Center(
                         child: Text(
-                          'Apply Job',
+                          'Team',
                           style: clipTextStyleHeadWhite,
                         ),
                       ),
                       height: 50,
-                      width: 200,
+                      width: 100,
+                      decoration: BoxDecoration(
+                          color: colorBtn,
+                          borderRadius: BorderRadius.circular(20)),
+                    ),
+                  ),
+                ),
+                 Padding(
+                  padding: const EdgeInsets.only(
+                      left: 240, top: 10, right: 10, bottom: 10),
+                  child: InkWell(
+                    onTap: (){},
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          'Individual',
+                          style: clipTextStyleHeadWhite,
+                        ),
+                      ),
+                      height: 50,
+                      width: 100,
                       decoration: BoxDecoration(
                           color: colorBtn,
                           borderRadius: BorderRadius.circular(20)),
@@ -179,7 +196,7 @@ class _DetailSpotifyState extends State<DetailSpotify> {
                           ],
                         ),
                         child: Image.asset(
-                          'assets/images/spoti.png',
+                          'assets/images/Netflix.png',
                           height: 20,
                           width: 20,
                         ),
@@ -193,14 +210,14 @@ class _DetailSpotifyState extends State<DetailSpotify> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Advertising',
+                              'Design System',
                               style: clipTextStyleHead,
                             ),
                             SizedBox(
                               height: 5,
                             ),
                             Text(
-                              'Spotify',
+                              'Netflix',
                               style: clipTextStyleBody,
                               textAlign: TextAlign.left,
                             ),
@@ -208,7 +225,7 @@ class _DetailSpotifyState extends State<DetailSpotify> {
                               height: 5,
                             ),
                             Text(
-                              'IDR 11.700.000',
+                              'IDR 9.000.000',
                               style: clipTextStyleHead,
                             ),
                           ],
@@ -235,7 +252,7 @@ class _DetailSpotifyState extends State<DetailSpotify> {
                               padding:
                                   const EdgeInsets.only(left: 10, bottom: 3),
                               child: Text(
-                                'San Jose',
+                                'California',
                                 style: TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w400,
@@ -247,7 +264,7 @@ class _DetailSpotifyState extends State<DetailSpotify> {
                               padding:
                                   const EdgeInsets.only(right: 10, bottom: 3),
                               child: Text(
-                                '1 day ago',
+                                '3 day ago',
                                 style: TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w400,
@@ -282,7 +299,21 @@ class _DetailSpotifyState extends State<DetailSpotify> {
                     child: Icon(Icons.timer_outlined),
                   ),
                   Text(
-                    'Full Time',
+                    'Part Time',
+                    style: clipTextStyleBody,
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 15,
+              ), Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25),
+                    child: Icon(Icons.groups_2_outlined),
+                  ),
+                  Text(
+                    'Team / Individual',
                     style: clipTextStyleBody,
                   )
                 ],

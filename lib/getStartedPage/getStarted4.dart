@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jobasee/homePage/homePage.dart';
+import 'package:jobasee/homePage/ChoosePage.dart';
 import 'package:jobasee/loginPage/loginPage.dart';
 import 'package:jobasee/theme/theme.dart';
 

@@ -1,54 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:jobasee/detailJob/spotify.dart';
-import 'package:jobasee/navigationBar/navigationBar.dart';
 import 'package:jobasee/searchPage/searchJobPage.dart';
 import 'package:jobasee/theme/theme.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int myIndex = 0;
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        onTap: (index) {
-          setState(() {
-            myIndex = index;
-          });
-        },
-        backgroundColor: Colors.grey[200],
-        currentIndex: myIndex,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.menu_book_outlined),
-            label: 'Course',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.article_outlined),
-            label: 'Blog',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.badge_outlined),
-            label: 'Portofolio',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outlined),
-            label: 'Profile',
-          ),
-        ],
-      ),
+    return  Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -143,8 +102,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SearchJob()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SearchJob()));
                   },
                 ),
               ),
@@ -423,8 +384,8 @@ class _HomePageState extends State<HomePage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 10, bottom: 3),
+                              padding: const EdgeInsets.only(
+                                  left: 10, bottom: 3),
                               child: Text(
                                 'California',
                                 style: TextStyle(
@@ -435,8 +396,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsets.only(right: 10, bottom: 3),
+                              padding: const EdgeInsets.only(
+                                  right: 10, bottom: 3),
                               child: Text(
                                 '3 days ago',
                                 style: TextStyle(
@@ -621,15 +582,19 @@ class _HomePageState extends State<HomePage> {
                     Stack(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 10, left: 20),
+                          padding:
+                              const EdgeInsets.only(right: 10, left: 20),
                           child: Container(
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 90, top: 20),
+                              padding:
+                                  const EdgeInsets.only(left: 90, top: 20),
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.only(left: 40),
+                                    padding:
+                                        const EdgeInsets.only(left: 40),
                                     child: Text(
                                       'Become a Good Copywriter',
                                       style: subText,
@@ -657,7 +622,8 @@ class _HomePageState extends State<HomePage> {
                                     height: 5,
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(left: 40),
+                                    padding:
+                                        const EdgeInsets.only(left: 40),
                                     child: Text(
                                       'FREE',
                                       style: subText,
@@ -707,7 +673,8 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ],
                             ),
-                            child: Image.asset('assets/images/copyWriter.png'),
+                            child:
+                                Image.asset('assets/images/copyWriter.png'),
                           ),
                         ),
                       ],
@@ -715,15 +682,19 @@ class _HomePageState extends State<HomePage> {
                     Stack(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 10, left: 20),
+                          padding:
+                              const EdgeInsets.only(right: 10, left: 20),
                           child: Container(
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 90, top: 20),
+                              padding:
+                                  const EdgeInsets.only(left: 90, top: 20),
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.only(left: 40),
+                                    padding:
+                                        const EdgeInsets.only(left: 40),
                                     child: Text(
                                       'Become a Good Copywriter',
                                       style: subText,
@@ -751,7 +722,8 @@ class _HomePageState extends State<HomePage> {
                                     height: 5,
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(left: 40),
+                                    padding:
+                                        const EdgeInsets.only(left: 40),
                                     child: Text(
                                       'FREE',
                                       style: subText,
@@ -801,7 +773,8 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ],
                             ),
-                            child: Image.asset('assets/images/dataAnalyst.png'),
+                            child: Image.asset(
+                                'assets/images/dataAnalyst.png'),
                           ),
                         ),
                       ],
@@ -809,15 +782,19 @@ class _HomePageState extends State<HomePage> {
                     Stack(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(right: 10, left: 20),
+                          padding:
+                              const EdgeInsets.only(right: 10, left: 20),
                           child: Container(
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 90, top: 20),
+                              padding:
+                                  const EdgeInsets.only(left: 90, top: 20),
                               child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsets.only(left: 40),
+                                    padding:
+                                        const EdgeInsets.only(left: 40),
                                     child: Text(
                                       'Become a Good Copywriter',
                                       style: subText,
@@ -845,7 +822,8 @@ class _HomePageState extends State<HomePage> {
                                     height: 5,
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(left: 40),
+                                    padding:
+                                        const EdgeInsets.only(left: 40),
                                     child: Text(
                                       'FREE',
                                       style: subText,
@@ -895,7 +873,8 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ],
                             ),
-                            child: Image.asset('assets/images/copyWriter.png'),
+                            child:
+                                Image.asset('assets/images/copyWriter.png'),
                           ),
                         ),
                       ],
@@ -950,8 +929,8 @@ class _HomePageState extends State<HomePage> {
                               height: 5,
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 40, right: 10),
+                              padding: const EdgeInsets.only(
+                                  left: 40, right: 10),
                               child: Row(
                                 children: [
                                   Icon(Icons.person_outline_sharp),
@@ -1040,8 +1019,8 @@ class _HomePageState extends State<HomePage> {
                               height: 5,
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 40, right: 10),
+                              padding: const EdgeInsets.only(
+                                  left: 40, right: 10),
                               child: Row(
                                 children: [
                                   Icon(Icons.person_outline_sharp),

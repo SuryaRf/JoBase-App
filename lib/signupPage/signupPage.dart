@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jobasee/homePage/homePage.dart';
+import 'package:jobasee/homePage/ChoosePage.dart';
+import 'package:jobasee/homePage/homepage.dart';
 import 'package:jobasee/loginPage/loginPage.dart';
 import 'package:jobasee/theme/theme.dart';
 
@@ -231,7 +232,7 @@ class SignupPage extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ChoosePage()));
                   },
                   child: Container(
                     height: 50,

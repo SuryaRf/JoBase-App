@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:jobasee/applySucces/applySucces.dart';
+import 'package:jobasee/detailJob/netflix.dart';
 import 'package:jobasee/detailJob/spotify.dart';
 import 'package:jobasee/findPage/findPage.dart';
 import 'package:jobasee/getStartedPage/getStarted.dart';
+import 'package:jobasee/homePage/ChoosePage.dart';
 import 'package:jobasee/homePage/homepage.dart';
 import 'package:jobasee/loginPage/loginPage.dart';
 import 'package:jobasee/searchPage/searchJobPage.dart';
@@ -18,7 +21,7 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: ChoosePage(),
     );
   }
 }

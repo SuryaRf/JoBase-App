@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:jobasee/detailJob/spotify.dart';
-import 'package:jobasee/navigationBar/navigationBar.dart';
 import 'package:jobasee/theme/theme.dart';
 
 class SearchJob extends StatefulWidget {
