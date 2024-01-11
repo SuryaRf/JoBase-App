@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:jobasee/blogPage/blogPage.dart';
 import 'package:jobasee/coursePage/coursePage.dart';
 import 'package:jobasee/homePage/ChoosePage.dart';
-import 'package:jobasee/homePage/ChoosePage.dart';
 import 'package:jobasee/homePage/homepage.dart';
 import 'package:jobasee/portofolioPage/porotofolioPage.dart';
 import 'package:jobasee/profilePage.dart/profilePage.dart';
@@ -92,8 +91,4 @@ class _ChoosePageState extends State<ChoosePage> {
     );
   }
 }
-
-
-
-          // CoursePage(),
 

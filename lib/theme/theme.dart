@@ -4,6 +4,7 @@ Color colorBtn = const Color(0xff3580E9);
 Color colorBtnGrey = const Color.fromARGB(255, 172, 172, 172);
 Color colorNotif = const Color.fromARGB(255, 4, 190, 247);
 Color colorClip = const Color(0xFF3580E9);
+Color colorCourse = Color.fromARGB(133, 36, 157, 255);
 
 TextStyle titleText = const TextStyle(
   fontWeight: FontWeight.w900,

@@ -727,6 +727,7 @@ class _SearchJobState extends State<SearchJob> {
                   ],
                 ),
               ),
+              const SizedBox(height: 20,)
             ],
           ),
         ),
